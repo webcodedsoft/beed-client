@@ -77,7 +77,7 @@ export function ImageReader(file, response) {
 }
 
 export const base = {
-    baseUrl: 'http://localhost:2021',
+    baseUrl: 'https://beed-server.herokuapp.com',
 }
 
 
