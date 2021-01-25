@@ -337,6 +337,8 @@ body ul ul ul { margin-top: 0; }
 
 .job-listing .job-listing-description {
 	top: 3px;
+	position: absolute;
+	right: 50px;
 }
 .timers { 
 		margin-right: -100px;
