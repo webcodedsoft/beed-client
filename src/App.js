@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { withRouter } from 'react-router'
+import { Route, Switch } from "react-router-dom";
+import { loadProgressBar } from "axios-progress-bar";
+import 'react-toastify/dist/ReactToastify.css';
+import "axios-progress-bar/dist/nprogress.css";
+import Index from './components/Index';
+import CreateAuction from './components/CreateAuction';
+import "react-datetime/css/react-datetime.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+loadProgressBar();
+class App extends Component {
+  render() {
+    return (
+      <>
+        <Switch>
+          <Route path="/" exact component={Index} />
+          <Route path="/create-auction" exact component={CreateAuction} />
+        </Switch>
+      </>
+    )
+  }
 }
 
-export default App;
+
+export default withRouter(App);
